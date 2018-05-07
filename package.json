@@ -1,0 +1,22 @@
+{
+  "name": "wristwatch_fe_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "pm2 start app.js",
+    "stop": "pm2 stop all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.canplay.com.cn:3000/por/wristwatch_fe_api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "express": "^4.16.3",
+    "request": "^2.85.0"
+  }
+}
