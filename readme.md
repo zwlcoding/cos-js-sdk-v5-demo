@@ -73,9 +73,9 @@ const getCosAuth = (options, callback, fetchCB) => {
         callbackData.ExpiredTime = res.data.ExpiredTime
         callbackData.XCosSecurityToken = res.data.XCosSecurityToken
         callback(callbackData)
-      } else {
-        fetchCB(callbackData)
       }
+      fetchCB(callbackData)
+    
     },
     error: function () {
       fetchCB({
@@ -117,7 +117,7 @@ class App extends React.Component {
       getAuthorization: (options, callback)=>{
         getCosAuth(options, callback, (fetchRes) => {
           // 可以在这里面统一处理各种异常情况
-          // fetchRes.code === 0 上传成功
+          // fetchRes.code === 0 加签成功
           // fetchRes.code === 1 文件过大
           // fetchRes.code === 2 底层加签接口异常，腾讯云的问题
           // fetchRes.code === 3 rest加签接口异常，自己的接口超时等
